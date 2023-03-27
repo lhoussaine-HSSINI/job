@@ -1,0 +1,250 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  
+*,
+*::before,
+*::after {
+-webkit-box-sizing: border-box;
+box-sizing: border-box; }
+  
+html {
+font-family: sans-serif;
+line-height: 1.15;
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+display: block; }
+  
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+text-align: left;
+background-color: #fff; }
+
+
+/* side bare  */
+
+.css-1dp5vir {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 0.125rem;
+    background-image: linear-gradient(90deg, rgb(255, 75, 75), rgb(255, 253, 128));
+    z-index: 999990;
+}
+
+li a:active{
+  text-align: center!important;
+  margin: 0px!important;
+  --hover-color: #eee;
+  color: rgb(151, 34, 255) !important;
+  background: rgb(233, 236, 239) !important;
+  font-size: 16px !important;
+  background-color: var(--hover-color) !important;
+}
+li a {
+  text-align: center!important;
+  margin: 0px!important;
+  --hover-color: #eee!important;
+  font-size: 14px !important;
+  color: rgb(151, 34, 255) !important;
+}
+li a:hover {
+  background-color: var(--hover-color) !important;
+}
+
+
+
+
+.wrapper {
+    width: 100%; }
+  
+#sidebar {
+background-color: rgb(240 242 246) !important;
+min-width: 300px;
+max-width: 300px;
+background: #32373d;
+color: #fff;
+-webkit-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+position: relative; 
+}
+
+    #sidebar.active {
+      margin-left: -300px; }
+
+      #sidebar.active .custom-menu {
+        margin-right: -50px; }
+      #sidebar.active .btn.btn-primary:before {
+        content: "\f053";
+        font-family: "FontAwesome";
+        right: 2px !important; }
+      #sidebar.active .btn.btn-primary:after {
+        display: none; }
+
+
+
+#sidebar ul li {
+    font-size: 16px; }
+#sidebar ul li > ul {
+margin-left: 10px; }
+#sidebar ul li > ul li {
+    font-size: 14px; }
+#sidebar ul li a {
+padding: 15px 30px;
+display: block;
+color: rgba(255, 255, 255, 0.6);
+border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #2f89fc;
+    border-bottom: 1px solid #2f89fc; 
+    text-decoration: none !important;}
+#sidebar ul li.active > a {
+    text-align: center;
+    margin: 0px;
+    --hover-color: #eee;
+    color: rgb(151, 34, 255) !important;
+    background: rgb(233, 236, 239) !important;
+    font-size: 16px !important;
+    font-weight: 900 !important;}
+#sidebar ul li.active > a:hover {
+    background: #2f89fc;
+    border-bottom: 1px solid #2f89fc; }
+
+@media (max-width: 991.98px) {
+    #sidebar {
+    margin-left: -300px; }
+    #sidebar.active {
+        margin-left: 0; }
+    #sidebar .custom-menu {
+        margin-right: -60px !important;
+        top: 10px !important; } }
+#sidebar .custom-menu {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-right: -35px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+#sidebar .custom-menu {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; } }
+#sidebar .custom-menu .btn.btn-primary {
+background: #2f89fc;
+border-color: transparent;
+position: relative;
+color: #000 !important;
+width: 30px;
+height: 30px; }
+
+#sidebar .custom-menu .btn.btn-primary:after, #sidebar .custom-menu .btn.btn-primary:before {
+position: absolute;
+top: 2px;
+left: 0;
+right: 0;
+bottom: 0;
+font-family: "FontAwesome";
+color: #fff; }
+#sidebar .custom-menu .btn.btn-primary:after {
+    content: "\f054";
+    left: 2px; }
+  
+
+
+
+
+#content {
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+/* btn open and close  */
+.btn.btn-primary {
+background: #2f89fc;
+border-color: #2f89fc; 
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+    background: #2f89fc !important;
+    border-color: #2f89fc !important; 
+}
+
+div.scroll {
+    /* background-color: #fed9ff; */
+    /* width: 600px; */
+    height: 430px;
+    overflow-x:hidden;
+    overflow-y: auto;
+    /* text-align: center; */
+    padding: 20px;
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+}
+div.scroll {
+    scrollbar-gutter: stable both-edges;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+    font-family: Outfit,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    line-height: 1.25;
+}
+div.scroll::-webkit-scrollbar{
+    width: 12px;
+    background-color:var(--scrollbarBG) !important;
+    border-radius: 6px !important;
+    
+  }
+
+div.scroll::-webkit-scrollbar-track {
+background: var(--scrollbarBG);
+}
+div.scroll::-webkit-scrollbar-thumb {
+background-color: var(--thumbBG) ;
+border-radius: 6px;
+border: 3px solid var(--scrollbarBG);
+}
